@@ -49,7 +49,7 @@ namespace GuardClauses.UnitTests
             public IEnumerator<object[]> GetEnumerator()
             {
                 yield return new object[] { 20, (Func<int, bool>)((x) => x > 10) };
-                yield return new object[] { DateAndTime.Now, (Func<DateTime, bool>)((x) => x > DateTime.MinValue) };
+                //yield return new object[] { DateAndTime.Now, (Func<DateTime, bool>)((x) => x > DateTime.MinValue) };
                 yield return new object[] { 20.0f, (Func<float, bool>)((x) => x > 10.0f) };
                 //yield return new object[] { 20.0m, (Func<decimal, bool>)((x) => x > 10.0m) };
                 yield return new object[] { 20.0, (Func<double, bool>)((x) => x > 10.0) };
@@ -65,7 +65,7 @@ namespace GuardClauses.UnitTests
             public IEnumerator<object[]> GetEnumerator()
             {
                 yield return new object[] { 20, (Func<int, bool>)((x) => x < 10) };
-                yield return new object[] { DateAndTime.Now, (Func<DateTime, bool>)((x) => x > DateTime.MaxValue) };
+                //yield return new object[] { DateAndTime.Now, (Func<DateTime, bool>)((x) => x > DateTime.MaxValue) };
                 yield return new object[] { 20.0f, (Func<float, bool>)((x) => x > 30.0f) };
                 //yield return new object[] { 20.0m, (Func<decimal, bool>)((x) => x > 30.0m) };
                 yield return new object[] { 20.0, (Func<double, bool>)((x) => x > 30.0) };
