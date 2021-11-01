@@ -9,6 +9,9 @@ namespace Ardalis.GuardClauses
     {
     }
 
+    /// <summary>
+    /// Simple interface to provide a generic mechanism to build guard clause extension methods from.
+    /// </summary>
     public interface IGuardDebugClause
     {
     }
@@ -24,6 +27,9 @@ namespace Ardalis.GuardClauses
         /// </summary>
         [JetBrainsNotNull] public static IGuardClause Against { get; } = new Guard();
 
+        /// <summary>
+        /// An entry point to a set of Guard Clauses to ran only in Debug.
+        /// </summary>
         [JetBrainsNotNull] public static IGuardDebugClause DebugAgainst { get; } = new Guard();
 
         private Guard() { }
